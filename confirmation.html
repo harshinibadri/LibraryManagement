@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Issued Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>📚Book Issued Successfully!</h2>
+        <div id="bookDetails"></div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const studentName = urlParams.get("name");
+        const email = urlParams.get("email");
+        const bookTitle = urlParams.get("book");
+        const issueDate = urlParams.get("issueDate");
+        const dueDate = urlParams.get("dueDate");
+        document.getElementById("bookDetails").innerHTML = `
+            <p><strong>Student Name:</strong> ${studentName}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Book Title:</strong> ${bookTitle}</p>
+            <p><strong>Issue Date:</strong> ${issueDate}</p>
+            <p><strong>Due Date:</strong> ${dueDate}</p>
+            <p>⚠️<strong>Please return the book before the deadline to avoid fines.</strong></p>
+        `;
+    </script>
+</body>
+</html>

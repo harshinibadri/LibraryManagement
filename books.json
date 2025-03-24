@@ -1,0 +1,50 @@
+[
+  {
+    "studentName": "Badri Harshini",
+    "email": "harshinibadri2928@gmail.com",
+    "bookTitle": "Intoduction to Data Science",
+    "issueDate": "2025-03-10T00:00:00.000Z",
+    "dueDate": "2025-03-24T00:00:00.000Z",
+    "status": "Borrowed"
+  },
+  {
+    "studentName": "Badri Harshitha",
+    "email": "harshithabadri2848@gmail.com",
+    "bookTitle": "Internet of Things",
+    "issueDate": "2025-03-11T00:00:00.000Z",
+    "dueDate": "2025-03-25T00:00:00.000Z",
+    "status": "Borrowed"
+  },
+  {
+    "studentName": "Divishna Annarapu",
+    "email": "annarapudivishna@gmail.com",
+    "bookTitle": "Data Structures",
+    "issueDate": "2025-03-10T00:00:00.000Z",
+    "dueDate": "2025-03-24T00:00:00.000Z",
+    "status": "Borrowed"
+  },
+  {
+    "studentName": "Kshethragna Suthari",
+    "email": "kshethra1725@gmail.com",
+    "bookTitle": "C programming",
+    "issueDate": "2025-03-11T00:00:00.000Z",
+    "dueDate": "2025-03-25T00:00:00.000Z",
+    "status": "Borrowed"
+  },
+  {
+    "studentName": "Badri Venugopal",
+    "email": "venugopalbadri208@gmail.com",
+    "bookTitle": "Optical Fibres",
+    "issueDate": "2025-03-12T00:00:00.000Z",
+    "dueDate": "2025-03-26T00:00:00.000Z",
+    "status": "Borrowed"
+  },
+  {
+    "studentName": "Abdul Shafeena",
+    "email": "abdulshafeena@gmail.com",
+    "bookTitle": "Big Data Computing",
+    "issueDate": "2025-03-12T00:00:00.000Z",
+    "dueDate": "2025-03-26T00:00:00.000Z",
+    "status": "Borrowed"
+  }
+]

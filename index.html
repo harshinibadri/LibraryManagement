@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Library Management</title>
+</head>
+<body>
+    <div class="container">
+        <h2>📚Library Book Issue Form</h2>
+        <form id="bookForm">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="book">Book Title:</label>
+            <input type="text" id="book" placeholder="Enter book title" required>
+
+            <label for="issueDate">Issue Date:</label>
+            <input type="date" id="issueDate" required>
+            <button type="submit">Issue Book</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("bookForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            let studentName = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let bookTitle = document.getElementById("book").value;
+            let issueDate = document.getElementById("issueDate").value;
+            fetch("http://localhost:4000/issueBook", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ studentName, email, bookTitle, issueDate })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    window.location.href = `confirmation.html?name=${studentName}&email=${email}&book=${bookTitle}&issueDate=${issueDate}&dueDate=${data.dueDate}`;
+                } else {
+                    alert("Error issuing book");
+                }
+            })
+            .catch(error => {
+                alert("Error: " + error);
+            });
+        });
+    </script>
+</body>
+</html>
